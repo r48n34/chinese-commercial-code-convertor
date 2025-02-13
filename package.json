@@ -1,6 +1,6 @@
 {
   "name": "chinese-commercial-code-convertor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Typescript code for convert Chinese Commercial Code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
