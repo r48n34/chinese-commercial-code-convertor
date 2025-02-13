@@ -2,9 +2,9 @@
 
 Simple Typescript code for convert Chinese Commercial Code.
 
-- 💪🏼 Support both `China` and `Taiwan` standard
+- 💪🏼 Support both `CN` and `TW` standard
 - 💼 Zero dependency
-- 👔 Tested Works on `Node.js`, `React` and other web applications
+- 👔 Tested works on `Node.js`, `React` and other web applications
 
 <a href="https://www.npmjs.com/package/chinese-commercial-code-convertor"> <img src="https://img.shields.io/npm/v/chinese-commercial-code-convertor" /> </a>
 <a href="https://github.com/r48n34/chinese-commercial-code-convertor"><img src="https://img.shields.io/github/actions/workflow/status/r48n34/chinese-commercial-code-convertor/test.yml" /></a>
@@ -47,7 +47,7 @@ numberToCode(
 ```
 
 ### `codeToNumber()`
-Convert your chinese string input to number string
+Convert your chinese string input to number string.
 ```ts
 codeToNumber(
     input: string | string[],
@@ -56,7 +56,7 @@ codeToNumber(
 ```
 
 ### Options
-The Option input is a object which included the following items
+The Option input is a object which included the following items:
 ```ts
 interface Options {
     // Default: "tw"
