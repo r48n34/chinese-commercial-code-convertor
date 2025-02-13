@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "author": "reemo",
-  "homepage": "",
-  "repository": "",
+  "homepage": "https://github.com/r48n34/chinese-commercial-code-convertor",
+  "repository": "https://github.com/r48n34/chinese-commercial-code-convertor",
   "scripts": {
     "start": "ts-node src/index.ts",
     "dev": "ts-node src/index.ts",

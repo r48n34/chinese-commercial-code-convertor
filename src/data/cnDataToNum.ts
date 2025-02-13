@@ -1,4 +1,4 @@
-{
+export const cnDataToNum = {
     "垛": "1000",
     "坨": "1001",
     "埃": "1002",

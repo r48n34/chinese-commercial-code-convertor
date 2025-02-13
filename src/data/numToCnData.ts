@@ -1,4 +1,4 @@
-{
+export const numToCnData = {
     "0001": "一",
     "0002": "丁",
     "0003": "七",

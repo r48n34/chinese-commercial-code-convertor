@@ -1,3 +1,9 @@
+import { cnDataToNum } from "../data/cnDataToNum"
+import { twDataToNum } from "../data/twDataToNum"
+
+import { numToCnData } from "../data/numToCnData"
+import { numToTwData } from "../data/numToTwData"
+
 function toFourNumStr(input: string | number) {
     let cpKey = input + "";
 
@@ -29,8 +35,8 @@ export function numberToCode(
     };
 
     const data: Record<string, string> = options.lang === "tw"
-        ? require("../data/numToTwData.json")
-        : require("../data/numToCnData.json");
+        ? numToTwData
+        : numToCnData;
 
     if (Array.isArray(input)) {
         return input.map((key) => {
@@ -60,11 +66,9 @@ export function codeToNumber(
         ...inputOptions,
     };
 
-    
-
     const data: Record<string, string> = options.lang === "tw"
-        ? require("../data/twDataToNum.json")
-        : require("../data/cnDataToNum.json");
+        ? twDataToNum
+        : cnDataToNum;
 
     if (Array.isArray(input)) {
         return input.map((key) => {
