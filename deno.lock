@@ -86,8 +86,6 @@
       "dependencies": [
         "npm:@types/jest@^29.2.3",
         "npm:@types/node@^18.11.9",
-        "npm:copyfiles@^2.4.1",
-        "npm:cpy-cli@5",
         "npm:jest@^29.3.1",
         "npm:ts-jest@^29.0.3",
         "npm:ts-node@^10.9.1",

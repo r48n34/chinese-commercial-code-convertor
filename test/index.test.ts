@@ -12,6 +12,7 @@ test('TW test numberToCode', () => {
     expect(numberToCode("123", {lang: "tw"})).toBe("伋");
 
     expect(numberToCode(["0144", "0155"], {lang: "tw"})).toBe("低作");
+    expect(numberToCode([144, 155])).toBe("低作");
 
     expect(numberToCode([1315, 1355, 1], {lang: "tw"})).toBe("孖宜一");
 

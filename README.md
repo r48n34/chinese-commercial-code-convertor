@@ -2,7 +2,12 @@
 
 Simple Typescript code for convert Chinese Commercial Code.
 
-- Zero dependency
+- 💪🏼 Support both `China` and `Taiwan` standard
+- 💼 Zero dependency
+- 👔 Tested Works on `Node.js`, `React` and other web applications
+
+<a href="https://www.npmjs.com/package/chinese-commercial-code-convertor"> <img src="https://img.shields.io/npm/v/chinese-commercial-code-convertor" /> </a>
+<a href="https://github.com/r48n34/chinese-commercial-code-convertor"><img src="https://img.shields.io/github/actions/workflow/status/r48n34/chinese-commercial-code-convertor/test.yml" /></a>
 
 ## 💻 Install 
 ```bash
@@ -20,6 +25,7 @@ console.log(numberToCode(36, {lang: "tw"})); // "久", Will auto convert 36 to 0
 
 console.log(numberToCode("0155")); // "作"
 console.log(numberToCode(["0144", "0155"])); // 低作"
+console.log(numberToCode([144, 155])); // 低作"
 
 // Convert Chinese Code To Number
 console.log(codeToNumber("姹")) // "1234"
