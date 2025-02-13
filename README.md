@@ -8,7 +8,10 @@ npm i chinese-commercial-code-convertor
 yarn add chinese-commercial-code-convertor
 ```
 
-## Status 
+## Usage
+```ts
+import { numberToCode, codeToNumber } from "chinese-commercial-code-convertor"
+```
 
 ## Dev logs
 
