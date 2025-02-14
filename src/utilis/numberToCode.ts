@@ -4,7 +4,10 @@ import { twDataToNum } from "../data/twDataToNum"
 import { numToCnData } from "../data/numToCnData"
 import { numToTwData } from "../data/numToTwData"
 
-function toFourNumStr(input: string | number) {
+/**
+ * Helper function to make numbers or string into 4 code format
+ */
+function toFourNumStr(input: string | number): string {
     let cpKey = input + "";
 
     while (cpKey.length < 4) {
@@ -14,6 +17,9 @@ function toFourNumStr(input: string | number) {
     return cpKey;
 }
 
+/**
+ * Options Settings for general convert functions
+ */
 interface Options {
     lang?: "tw" | "cn";
     notFoundReturn?: string;
@@ -62,6 +68,9 @@ export function numberToCode(
     return "";
 }
 
+/**
+ * Convert Chinese word code to regarding number code
+ */
 export function codeToNumber(
     input: string | string[],
     inputOptions?: Options,
@@ -95,6 +104,4 @@ export function codeToNumber(
     else {
         return data[input] !== undefined ? data[input] : options.notFoundReturn;
     }
-
-    return ""
 }
