@@ -1,4 +1,4 @@
-export const numToTwData = {
+export const numToTwData: Record<string, string> = {
     "1000": "垛",
     "1001": "垚",
     "1002": "埃",

@@ -11,6 +11,10 @@ test('TW test numberToCode', () => {
     expect(numberToCode("0123", {lang: "tw"})).toBe("伋");
     expect(numberToCode("123", {lang: "tw"})).toBe("伋");
 
+    expect(numberToCode("0123 0123 0155", {lang: "tw"})).toBe("伋伋作");
+    expect(numberToCode("0123 8260 0155", {lang: "tw"})).toBe("伋作");
+    expect(numberToCode("0123 8260 0155", {lang: "tw", notFoundReturn: "*"})).toBe("伋*作");
+
     expect(numberToCode(["0144", "0155"], {lang: "tw"})).toBe("低作");
     expect(numberToCode([144, 155])).toBe("低作");
 
@@ -62,5 +66,14 @@ test('CN test numberToCode', () => {
 
 test('CN test codeToNumber', () => {
     expect(codeToNumber("咥", {lang: "cn"})).toBe("8134");
+
+    expect(codeToNumber("", {lang: "cn"})).toBe("-1");
+    expect(codeToNumber("?", {lang: "cn"})).toBe("-1");
+    expect(codeToNumber("?", {lang: "cn", notFoundReturn: "*"})).toBe("*");
+    expect(codeToNumber("低作", {lang: "cn"})).toBe("0144 0155");
+
+    expect(codeToNumber(["低", "作"], {lang: "cn"})).toBe("0144 0155");
+    expect(codeToNumber(["低", "劝", "作"], {lang: "cn"})).toBe("0144 0538 0155");
+    expect(codeToNumber(["", "劝", "作"], {lang: "cn"})).toBe("-1 0538 0155");
 
 })

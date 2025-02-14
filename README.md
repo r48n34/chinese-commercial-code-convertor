@@ -24,6 +24,7 @@ console.log(numberToCode(1234)); // "姹"
 console.log(numberToCode(36, {lang: "tw"})); // "久", Will auto convert 36 to 0036
 
 console.log(numberToCode("0155")); // "作"
+console.log(numberToCode("0123 0123 0155")); // "伋伋作"
 console.log(numberToCode(["0144", "0155"])); // 低作"
 console.log(numberToCode([144, 155])); // 低作"
 
@@ -94,6 +95,9 @@ codeToNumber("低劝作", { notFoundReturn: "?" }) // "0144 ? 0155"
 ```
 
 ## 💻 Dev logs
+
+### - 1.1.0
+1. Allow `codeToNumber()` to input split string.
 
 ### - 1.0.0
 1. Project init

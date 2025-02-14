@@ -1,4 +1,4 @@
-export const numToCnData = {
+export const numToCnData: Record<string, string> = {
     "0001": "一",
     "0002": "丁",
     "0003": "七",

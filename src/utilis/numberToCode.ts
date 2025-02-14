@@ -45,9 +45,17 @@ export function numberToCode(
                 ? data[cpKey]
                 : options.notFoundReturn;
         }).join("");
-    } else if (typeof input === "string" || typeof input === "number") {
+    }
+    else if(typeof input === "string"){
+        return input.split(" ").map((key) => {
+            const cpKey = toFourNumStr(key);
+            return data[cpKey] !== undefined
+                ? data[cpKey]
+                : options.notFoundReturn;
+        }).join("");
+    }
+    else if (typeof input === "number") {
         const cpStr = toFourNumStr(input);
-
         return data[cpStr] !== undefined ? data[cpStr] : options.notFoundReturn;
     }
 
